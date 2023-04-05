@@ -1,0 +1,237 @@
+{
+  "motorized": {
+    "isAircraft": true,
+    "hasAutopilot": true,
+    "hasSingleEngineControl": true,
+    "emptyMass": 2000,
+    "fuelCapacity": 8000,
+    "brakingFactor": 1.0,
+    "dragCoefficient": 0.35,
+    "tailDistance": 10.0,
+    "litVariable": "engine_magneto_1",
+    "panel": "mts:default_plane",
+    "hudTexture": "ivv:textures/guis/ivlabshud.png",
+    "panelTexture": "ivv:textures/guis/ivlabspanel.png"
+  },
+  "parts": [
+    {
+      "pos": [0.0,0.0,5.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,0.0,-5.0],
+      "rot": [0.0,180.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [5.0,0.0,0.0],
+      "rot": [0.0,90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [-5.0,0.0,0.0],
+      "rot": [0.0,-90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,1.0,0.0],
+      "rot": [0.0,0.0,0.0],
+      "isController": true,
+      "defaultPart": "mts:invisible_seat",
+      "types": ["seat"]
+    },
+    {
+      "pos": [2.0,-0.25,-2.0],
+      "isPermanent": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [-2.0,-0.25,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "isPermanent": true,
+      "isMirrored": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [2.0,-0.25,2.0],
+      "isPermanent": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [-2.0,-0.25,2.0],
+      "rot": [0.0,0.0,0.0],
+      "isPermanent": true,
+      "isMirrored": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,4.25,-1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1.25,4.25,-1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [1.25,4.25,1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1.25,4.25,1.25],
+          "width": 2.5,
+          "height": 0.5
+        }
+      ]
+    }
+  ],
+  "instruments": [],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Customizable Air Base",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "initialVariables": [],
+  "variableModifiers": [
+    {
+      "variable": "input_rudder",
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "damage_totaled",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "damage_totaled",
+          "axis": [0.0,0.0,10.0],
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "variable": "input_aileron",
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "damage_totaled",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "damage_totaled",
+          "axis": [0.0,0.0,2.0],
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "variable": "input_elevator",
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "damage_totaled",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "damage_totaled",
+          "axis": [0.0,0.0,1.0],
+          "duration": 20
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [],
+    "animatedObjects": [
+      {
+        "objectName": "fuel_translucent",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "fuel",
+            "clampMin": 0.01,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "scaling",
+            "variable": "fuel",
+            "centerPoint": [-1.0,0.0,-1.0],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "",
+    "health": 100,
+    "materialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

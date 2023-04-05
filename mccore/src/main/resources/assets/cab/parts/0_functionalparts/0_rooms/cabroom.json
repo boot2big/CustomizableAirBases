@@ -1,0 +1,105 @@
+{
+  "generic": {
+    "type": "generic_cab_extension",
+    "mustBeRemovedByScrewdriver": false,
+    "forwardsDamage": true,
+    "width": 5.0,
+    "height": 0.25,
+    "mass": 250
+  },
+  "parts": [
+    {
+      "pos": [0.0,0.0,5.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [5.0,0.0,0.0],
+      "rot": [0.0,90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [-5.0,0.0,0.0],
+      "rot": [0.0,-90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,4.25,-1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1.25,4.25,-1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [1.25,4.25,1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1.25,4.25,1.25],
+          "width": 2.5,
+          "height": 0.5
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Extension",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "health": 100,
+    "materialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "repairMaterialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

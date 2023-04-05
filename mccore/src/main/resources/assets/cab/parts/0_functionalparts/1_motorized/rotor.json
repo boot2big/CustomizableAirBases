@@ -1,0 +1,101 @@
+{
+  "generic": {
+    "type": "propeller_engine_cab",
+    "width": 3.0,
+    "height": 0.75,
+    "mass": 50,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "propeller_rotation",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0]
+      }
+    ]
+  },
+  "propeller": {
+    "isRotor": true,
+    "pitch": 25,
+    "diameter": 138
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Rotor",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "variableModifiers": [
+    {
+      "variable": "propeller_rpm_inverse",
+      "minValue": 120,
+      "maxValue": 1080,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "propeller_rpm",
+          "axis": [0.0,0.0,-1.0],
+          "offset": 1080.0
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "propeller",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 120.0,
+            "clampMax": 240.0,
+            "absolute": true
+          }
+        ]
+      },
+      {
+        "objectName": "propeller_translucent",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm_inverse",
+            "clampMin": 120.0,
+            "clampMax": 1080.0,
+            "absolute": true
+          }
+        ]
+      },
+      {
+        "objectName": "propeller_blur_translucent",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 120.0,
+            "clampMax": 180.0,
+            "absolute": true
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "health": 400,
+    "materialLists": [
+      ["oredict:ingotIron:1"]
+    ],
+    "repairMaterialLists": [
+      ["mts:ivv.tape:0:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"packID" : "cab",
+	"packName" : "Customizable Air Bases",
+	//"packItem" : "none",
+	"fileStructure" : 2,
+	/*"activators": {
+		"jsondefsbase": [],
+		"jsondefsaddonivv": ["boogeyman"]
+	},
+	"blockers" : {
+	},*/
+	"externalSkinsInOwnTab": false,
+	"internalSkinsInOwnTab": false
+
+}
