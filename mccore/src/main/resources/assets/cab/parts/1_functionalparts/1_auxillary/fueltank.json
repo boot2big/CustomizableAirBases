@@ -1,0 +1,62 @@
+{
+  "generic": {
+    "type": "interactable_barrel_fueltank"
+  },
+  "interactable": {
+    "interactionType": "barrel",
+    "feedsVehicles": true,
+    "inventoryUnits": 4.8
+  },
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.0,-1.0],
+          "width": 1.0,
+          "height": 2.0
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Fuel Tank",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "fuel_translucent",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.01,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "scaling",
+            "variable": "interactable_percent",
+            "centerPoint": [0,-1,-1],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "Holds additional fuel",
+    "materialLists": [
+      ["oredict:ingotIron:5","oredict:dyeRed:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

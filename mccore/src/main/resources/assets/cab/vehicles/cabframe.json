@@ -3,8 +3,8 @@
     "isAircraft": true,
     "hasAutopilot": true,
     "hasSingleEngineControl": true,
-    "emptyMass": 2000,
-    "fuelCapacity": 8000,
+    "emptyMass": 1500,
+    "fuelCapacity": 16000,
     "brakingFactor": 1.0,
     "dragCoefficient": 0.35,
     "tailDistance": 10.0,
@@ -87,6 +87,13 @@
       "partScale": [0.5,0.5,0.5],
       "defaultPart": "mts:invisible_wheel",
       "types": ["ground_wheel"]
+    },
+    {
+      "pos": [-1.0,1.0,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "minValue": 2.0,
+      "maxValue": 6.0,
+      "types": ["interactable_barrel_fueltank"]
     }
   ],
   "collisionGroups": [
@@ -148,17 +155,59 @@
   "initialVariables": [],
   "variableModifiers": [
     {
+      "variable": "autopilot_active",
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "engines_running"
+        },
+        {
+          "animationType": "translation",
+          "variable": "die_lol",
+          "axis": [0.0,0.0,1.0]
+        }
+      ]
+    },
+    {
+      "variable": "fly_wildly",
+      "maxValue": 1.0,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!seat_occupied_1",
+          "axis": [0.0,0.0,1.0]
+        },
+        {
+          "animationType": "translation",
+          "variable": "terrain_distance",
+          "axis": [4.0,0.0,0.0],
+          "offset": -120.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "!autopilot_active",
+          "axis": [1.0,0.0,0.0]
+        },
+        {
+          "animationType": "translation",
+          "variable": "damage_totaled",
+          "axis": [0.0,1.0,0.0]
+        }
+      ]
+    },
+    {
       "variable": "input_rudder",
       "animations": [
         {
           "animationType": "visibility",
-          "variable": "damage_totaled",
+          "variable": "fly_wildly",
           "clampMin": 1.0,
           "clampMax": 1.0
         },
         {
           "animationType": "translation",
-          "variable": "damage_totaled",
+          "variable": "fly_wildly",
           "axis": [0.0,0.0,10.0],
           "duration": 20
         }
@@ -169,13 +218,13 @@
       "animations": [
         {
           "animationType": "visibility",
-          "variable": "damage_totaled",
+          "variable": "fly_wildly",
           "clampMin": 1.0,
           "clampMax": 1.0
         },
         {
           "animationType": "translation",
-          "variable": "damage_totaled",
+          "variable": "fly_wildly",
           "axis": [0.0,0.0,2.0],
           "duration": 20
         }
@@ -186,13 +235,30 @@
       "animations": [
         {
           "animationType": "visibility",
-          "variable": "damage_totaled",
+          "variable": "fly_wildly",
           "clampMin": 1.0,
           "clampMax": 1.0
         },
         {
           "animationType": "translation",
-          "variable": "damage_totaled",
+          "variable": "fly_wildly",
+          "axis": [0.0,0.0,1.0],
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "variable": "throttle",
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "fly_wildly",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "!fly_wildly",
           "axis": [0.0,0.0,1.0],
           "duration": 20
         }
@@ -227,7 +293,7 @@
   },
   "general": {
     "description": "",
-    "health": 100,
+    "health": 3000,
     "materialLists": [
       ["minecraft:dirt:0:1"]
     ],

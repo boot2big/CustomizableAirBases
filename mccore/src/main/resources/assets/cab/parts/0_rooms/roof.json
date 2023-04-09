@@ -1,0 +1,64 @@
+{
+  "generic": {
+    "type": "generic_cab_roof",
+    "forwardsDamage": true,
+    "destroyable": true,
+    "width": 5.0,
+    "height": 0.25,
+    "mass": 50
+  },
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Roof",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "No pillars",
+    "health": 500,
+    "materialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "repairMaterialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

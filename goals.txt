@@ -1,0 +1,14 @@
+SHORT TERM
+
+Proper recipes + health balancing
+Fuel tank expansion
+Wall panels
+More room types
+Electric motor
+VTOL/HF jet motor
+
+LONG TERM
+
+Inter-pack compatibility
+Parking garage room (holds at least 5 cars)
+Weapons room (can take IVV and possibly other packs weapons)

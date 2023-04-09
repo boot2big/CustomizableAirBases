@@ -1,0 +1,146 @@
+{
+  "generic": {
+    "type": "propeller_engine_cab",
+    "destroyable": true,
+    "width": 3.0,
+    "height": 0.75,
+    "mass": 50,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "propeller_rotation",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0]
+      }
+    ]
+  },
+  "propeller": {
+    "isRotor": true,
+    "pitch": 25,
+    "diameter": 138
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Rotor",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "variableModifiers": [
+    {
+      "variable": "propeller_rpm_inverse",
+      "minValue": 120.0,
+      "maxValue": 1080.0,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "propeller_rpm",
+          "axis": [0.0,0.0,-1.0],
+          "offset": 1080.0
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "propeller",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 120.0,
+            "clampMax": 240.0,
+            "absolute": true
+          }
+        ]
+      },
+      {
+        "objectName": "propeller_translucent",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm_inverse",
+            "clampMin": 120.0,
+            "clampMax": 1080.0,
+            "absolute": true
+          }
+        ]
+      },
+      {
+        "objectName": "propeller_blur_translucent",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 120.0,
+            "clampMax": 180.0,
+            "absolute": true
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "cab:propeller_whip",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 1.0,
+            "clampMax": 10000.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "propeller_rpm",
+            "axis": [0.0,5.0E-4,0.0],
+            "offset": -0.1,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "propeller_rpm",
+            "axis": [0.0,6.5E-4,0.0],
+            "offset": 0.4
+          },
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.125,0.0],
+            "offset": -0.0625
+          }
+        ],
+        "looping": true,
+        "blockDoppler": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.75,
+        "maxDistance": 72.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 1.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "health": 100,
+    "materialLists": [
+      ["oredict:ingotIron:1"]
+    ],
+    "repairMaterialLists": [
+      ["mts:ivv.tape:0:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "generic": {
+    "type": "engine_cab",
+    "forwardsDamage": true,
+    "destroyable": true,
+    "width": 5.0,
+    "height": 0.25,
+    "mass": 200
+  },
+  "engine": {
+    "type": "normal",
+    "starterPower": 25,
+    "shiftSpeed": 20,
+    "revResistance": 8,
+    "maxRPM": 5375,
+    "maxSafeRPM": 5000,
+    "idleRPM": 800,
+    "startRPM": 600,
+    "revlimitRPM": 5000,
+    "revlimitBounce": 12,
+    "stallRPM": 400,
+    "engineWinddownRate": 50,
+    "heatingCoefficient": 0.5,
+    "coolingCoefficient": 1.5,
+    "engineWearFactor": 1.0,
+    "fuelConsumption": 2.5,
+    "propellerRatio": 1.0,
+    "gearRatios": [-1.0,0.0,1.0],
+    "fuelType": "gasoline",
+    "superchargerFuelConsumption": -2.0,
+    "superchargerEfficiency": -1.0,
+    "isCrankingNotPitched": true
+  },
+  "parts": [
+    {
+      "pos": [0.0,0.0,5.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [5.0,0.0,0.0],
+      "rot": [0.0,90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [-5.0,0.0,0.0],
+      "rot": [0.0,-90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,-0.2,0.0],
+      "rot": [-90.0,0.0,0.0],
+      "maxValue": 1200.0,
+      "partScale": [0.8,0.8,0.8],
+      "types": ["propeller_engine_cab"]
+    },
+    {
+      "pos": [2.0,-0.25,-2.0],
+      "isPermanent": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [-2.0,-0.25,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "isPermanent": true,
+      "isMirrored": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [2.0,-0.25,2.0],
+      "isPermanent": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [-2.0,-0.25,2.0],
+      "rot": [0.0,0.0,0.0],
+      "isPermanent": true,
+      "isMirrored": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [0.0,0.5,0.0],
+          "width": 2.75,
+          "height": 1.0
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Internal Combustion Motor",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [
+      {
+        "pos": [0.0,1.0,-2.0],
+        "rot": [0.0,180.0,0.0],
+        "scale": 0.5,
+        "variableName": "engine_rpm_percent_safe",
+        "variableFactor": 100.0,
+        "variableFormat": "%01.2f`",
+        "fontName": "ivv:digifont",
+        "defaultText": "ERROR!",
+        "color": "FFFFFF",
+        "lightsUp": true
+      },
+      {
+        "pos": [0.0,1.25,-2.0],
+        "rot": [0.0,180.0,0.0],
+        "scale": 0.5,
+        "variableName": "engine_temp",
+        "variableFactor": 1.0,
+        "variableFormat": "%01.2fc",
+        "fontName": "ivv:digifont",
+        "defaultText": "ERROR!",
+        "color": "FFFFFF",
+        "lightsUp": true
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "cab:enginelycomingo360_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blockDoppler": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "cab:enginelycomingo360_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ],
+        "blockDoppler": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "cab:enginelycomingo360_sputter",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "blockDoppler": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "cab:enginelycomingo360_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.002,0.0]
+          }
+        ],
+        "looping": true,
+        "blockDoppler": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "cab:engine_gasoline_idle",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.25,0.0],
+            "duration": 5
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.25,0.0],
+            "offset": 0.75
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,0.5,0.0],
+            "offset": 0.625
+          }
+        ],
+        "looping": true,
+        "blockDoppler": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "cab:engine_gasoline_hi",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.375,0.0],
+            "duration": 5
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.375,0.0],
+            "offset": 0.25
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.125,0.0],
+            "offset": -0.125
+          },
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.625,0.0],
+            "offset": 0.375
+          }
+        ],
+        "looping": true,
+        "blockDoppler": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "health": 400,
+    "materialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "repairMaterialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

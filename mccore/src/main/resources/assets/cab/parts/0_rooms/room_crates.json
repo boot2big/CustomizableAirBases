@@ -1,0 +1,596 @@
+{
+  "generic": {
+    "type": "generic_cab_extension",
+    "forwardsDamage": true,
+    "destroyable": true,
+    "width": 5.0,
+    "height": 0.25,
+    "mass": 250
+  },
+  "parts": [
+    {
+      "pos": [0.0,0.0,5.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [5.0,0.0,0.0],
+      "rot": [0.0,90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [-5.0,0.0,0.0],
+      "rot": [0.0,-90.0,0.0],
+      "maxValue": 10.0,
+      "types": ["engine_cab","generic_cab_extension"],
+      "linkedParts": []
+    },
+    {
+      "pos": [2.0,0.0,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_5"]
+      ]
+    },
+    {
+      "pos": [2.0,0.75,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_4"]
+      ]
+    },
+    {
+      "pos": [1.0,0.0,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_7"]
+      ]
+    },
+    {
+      "pos": [1.0,0.75,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_6"]
+      ]
+    },
+    {
+      "pos": [0.0,0.0,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_9"]
+      ]
+    },
+    {
+      "pos": [0.0,0.75,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_8"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.0,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_11"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.75,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_10"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.0,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_13"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.75,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_12"]
+      ]
+    },
+    {
+      "pos": [2.0,0.0,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_15"]
+      ]
+    },
+    {
+      "pos": [2.0,0.75,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_14"]
+      ]
+    },
+    {
+      "pos": [1.0,0.0,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_17"]
+      ]
+    },
+    {
+      "pos": [1.0,0.75,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_16"]
+      ]
+    },
+    {
+      "pos": [0.0,0.0,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_19"]
+      ]
+    },
+    {
+      "pos": [0.0,0.75,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_18"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.0,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_21"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.75,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_20"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.0,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_23"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.75,-1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_22"]
+      ]
+    },
+    {
+      "pos": [2.0,0.0,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_25"]
+      ]
+    },
+    {
+      "pos": [2.0,0.75,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_24"]
+      ]
+    },
+    {
+      "pos": [1.0,0.0,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_27"]
+      ]
+    },
+    {
+      "pos": [1.0,0.75,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_26"]
+      ]
+    },
+    {
+      "pos": [0.0,0.0,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_29"]
+      ]
+    },
+    {
+      "pos": [0.0,0.75,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_28"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.0,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_31"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.75,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_30"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.0,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_33"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.75,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_32"]
+      ]
+    },
+    {
+      "pos": [2.0,0.0,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_35"]
+      ]
+    },
+    {
+      "pos": [2.0,0.75,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_34"]
+      ]
+    },
+    {
+      "pos": [1.0,0.0,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_37"]
+      ]
+    },
+    {
+      "pos": [1.0,0.75,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_36"]
+      ]
+    },
+    {
+      "pos": [0.0,0.0,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_39"]
+      ]
+    },
+    {
+      "pos": [0.0,0.75,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_38"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.0,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_41"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.75,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_40"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.0,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_43"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.75,1.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_42"]
+      ]
+    },
+    {
+      "pos": [2.0,0.0,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_45"]
+      ]
+    },
+    {
+      "pos": [2.0,0.75,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_44"]
+      ]
+    },
+    {
+      "pos": [1.0,0.0,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_47"]
+      ]
+    },
+    {
+      "pos": [1.0,0.75,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_46"]
+      ]
+    },
+    {
+      "pos": [0.0,0.0,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_49"]
+      ]
+    },
+    {
+      "pos": [0.0,0.75,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_48"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.0,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_51"]
+      ]
+    },
+    {
+      "pos": [-1.0,0.75,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_50"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.0,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["!part_present_53"]
+      ]
+    },
+    {
+      "pos": [-2.0,0.75,2.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate","interactable_barrel","interactable_chest"],
+      "interactableVariables": [
+        ["part_present_52"]
+      ]
+    },
+    {
+      "pos": [2.0,-0.25,-2.0],
+      "isPermanent": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [-2.0,-0.25,-2.0],
+      "rot": [0.0,0.0,0.0],
+      "isPermanent": true,
+      "isMirrored": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [2.0,-0.25,2.0],
+      "isPermanent": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    },
+    {
+      "pos": [-2.0,-0.25,2.0],
+      "rot": [0.0,0.0,0.0],
+      "isPermanent": true,
+      "isMirrored": true,
+      "minValue": 0.1,
+      "maxValue": 1.0,
+      "partScale": [0.5,0.5,0.5],
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,-1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.25,-0.125,1.25],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [1.25,4.25,-1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1.25,4.25,-1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [1.25,4.25,1.25],
+          "width": 2.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1.25,4.25,1.25],
+          "width": 2.5,
+          "height": 0.5
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Cargo Extension",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "Holds 72 crates",
+    "health": 500,
+    "materialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "repairMaterialLists": [
+      ["minecraft:dirt:0:1"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}
